@@ -1,7 +1,8 @@
 import ChatHeader from "@/components/ChatHeader";
+import ChatInput from "@/components/ChatInput";
 import { chats } from "@/constants/mock";
 import { useLocalSearchParams } from "expo-router";
-import { ImageIcon, Lock, SendIcon } from "lucide-react-native";
+import { Lock } from "lucide-react-native";
 import React, { useState } from "react";
 import {
   KeyboardAvoidingView,
@@ -81,22 +82,7 @@ export default function Chat() {
         </View>
 
         {/* INPUT */}
-        <View className="flex-row items-center px-3 py-2 border-t border-gray-300 bg-white">
-          <Pressable className="p-2">
-            <ImageIcon />
-          </Pressable>
-
-          <TextInput
-            className="flex-1 mx-2 px-4 py-4 rounded-full bg-gray-100"
-            placeholder="Message"
-            multiline
-            textAlignVertical="top"
-          />
-
-          <Pressable className="p-2">
-            <SendIcon />
-          </Pressable>
-        </View>
+        <ChatInput />
       </KeyboardAvoidingView>
     </SafeAreaView>
   );

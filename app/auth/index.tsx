@@ -12,13 +12,13 @@ export default function AuthScreen() {
                border border-gray-300 rounded-2xl
                bg-white py-4
                active:scale-[0.98]"
+          onPress={() => router.push("/chats")}
         >
           <Image source={GoogleIcon} className="w-5 h-5" />
-          <Pressable onPress={() => router.push("/chats")}>
-            <Text className="text-base font-semibold text-gray-800">
-              Continue with Google
-            </Text>
-          </Pressable>
+
+          <Text className="text-base font-semibold text-gray-800">
+            Continue with Google
+          </Text>
         </Pressable>
 
         {/* Subtle legal text */}
